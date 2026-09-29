@@ -10,6 +10,16 @@ npm run dev        # http://localhost:3000
 npm run build      # compilación de producción
 ```
 
+## Contenido y SEO
+
+Antes de publicar cualquier texto, sigue las normas de `docs/seo/`:
+
+- [Normas de contenido y SEO](docs/seo/normas-contenido.md), incluido el uso de IA.
+- [Voz de marca](docs/seo/voz-de-marca.md).
+- [Análisis SEO](docs/seo/analisis-seo.md) con los problemas pendientes.
+
+`npm run seo:check` comprueba títulos, descripciones, expresiones típicas de texto de IA y la cabecera de los artículos.
+
 ## Estructura
 
 - `content/es.ts`, `en.ts`, `ca.ts` — **todo el texto de la web** por idioma. Las cifras marcadas con `EJEMPLO` son ilustrativas y deben validarse.
