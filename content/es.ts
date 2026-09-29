@@ -1,0 +1,596 @@
+// Contenido de la web en español (idioma de referencia).
+// Todo lo marcado con "EJEMPLO" son cifras ilustrativas que deben validarse antes de publicar
+// en el dominio definitivo. Solo aparecen en casos anónimos, nunca atribuidas a marcas reales.
+
+export const es = {
+  meta: {
+    title: "Lateral Zinkin — Marketing y comunicación para marcas con historia",
+    description:
+      "Consultora boutique de marketing y comunicación en Madrid desde 2007. Estrategia, marca y comunicación para editoriales, instituciones culturales, despachos profesionales y turismo.",
+  },
+  nav: {
+    services: "Servicios",
+    sectors: "Sectores",
+    cases: "Casos",
+    about: "Nacho",
+    test: "Test",
+    contact: "Contacto",
+    cta: "Reserva una sesión",
+    menu: "Menú",
+    close: "Cerrar",
+    language: "Idioma",
+  },
+  common: {
+    bookCta: "Reserva una sesión estratégica",
+    testCta: "Haz el test de visibilidad",
+    readMore: "Ver más",
+    seeAll: "Ver todos",
+    backHome: "Volver al inicio",
+    free: "30 min · Gratis · Sin compromiso",
+    skip: "Saltar al contenido",
+  },
+  hero: {
+    eyebrow: "Consultora boutique · Madrid · Desde 2007",
+    titleA: "Tu marca tiene",
+    titleB: "una historia.",
+    titleC: "La contamos desde el",
+    titleEm: "ángulo",
+    titleD: "que nadie más ve.",
+    sub: "Estrategia, marca y comunicación para editoriales, instituciones culturales, despachos profesionales y marcas de turismo que no quieren parecerse a nadie.",
+    primary: "Reserva una sesión estratégica",
+    secondary: "Haz el test (3 min)",
+    trust: "Han confiado en nosotros",
+    scroll: "Desliza",
+  },
+  stats: [
+    { value: "2007", label: "año en que empezamos a mirar de lado" },
+    { value: "50+", label: "marcas acompañadas" },
+    { value: "3", label: "sectores donde somos especialistas" },
+    // EJEMPLO: validar con datos reales de repetición/recomendación
+    { value: "9/10", label: "clientes repiten o nos recomiendan" },
+  ],
+  lateral: {
+    kicker: "El método",
+    title: "No vemos nada nuevo. Vemos distinto lo que todos han visto.",
+    intro:
+      "El pensamiento lateral consiste en resolver un problema desde un ángulo que nadie había probado. No es magia ni ocurrencia: es método. Y es lo que hacemos con cada marca.",
+    chapters: [
+      {
+        name: "Dick Fosbury",
+        year: "México, 1968",
+        before: "Todos saltaban de frente.",
+        after: "Él saltó de espaldas.",
+        lesson: "Oro olímpico. Hoy todo el mundo salta como él.",
+        img: "/img/fosbury.jpg",
+      },
+      {
+        name: "Johan Cruyff",
+        year: "Ámsterdam, 1971",
+        before: "Cada jugador tenía su puesto.",
+        after: "Él los jugó todos.",
+        lesson: "Inventó una forma de entender el juego que aún se enseña.",
+        img: "/img/cruyff.jpg",
+      },
+      {
+        name: "Jimi Hendrix",
+        year: "Woodstock, 1969",
+        before: "La guitarra se tocaba así.",
+        after: "Él le dio la vuelta.",
+        lesson: "Zurdo con una guitarra de diestro. Cambió el sonido del rock.",
+        img: "/img/hendrix.jpg",
+      },
+    ],
+    closingA: "Tu sector también tiene su forma “correcta” de hacer las cosas.",
+    closingB: "Nosotros buscamos la tuya.",
+  },
+  sectors: {
+    kicker: "Sectores",
+    title: "Especialistas en marcas donde la confianza lo es todo.",
+    sub: "Trabajamos donde el cliente no compra un producto, sino una promesa: una historia, un criterio, una experiencia.",
+    cta: "Ver cómo trabajamos en",
+    items: [
+      {
+        slug: "cultura-editorial",
+        num: "01",
+        title: "Cultura y editorial",
+        short: "Editoriales, autores, museos, escuelas e instituciones culturales.",
+        heroTitle: "Que lo que merece ser leído, visto y vivido encuentre a su público.",
+        heroSub:
+          "Lanzamientos editoriales, marca de autor, comunicación de instituciones y proyectos culturales. Con criterio, sin estridencias y con resultados medibles.",
+        pains: [
+          "Publicas buenos libros o programas buenas actividades, pero no llegan a quien debería.",
+          "Cada lanzamiento empieza de cero y depende de la suerte con la prensa.",
+          "Tus redes informan, pero no construyen comunidad.",
+          "Te cuesta explicar por qué tu propuesta es distinta a la de los grandes.",
+        ],
+        services: [
+          "Estrategia de lanzamiento de libros y colecciones",
+          "Marca personal de autores",
+          "Comunicación de exposiciones, festivales y programas",
+          "Redes sociales con criterio editorial",
+          "Newsletter y comunidad lectora",
+          "Captación de alumnos para escuelas",
+        ],
+        clients: ["Editorial Planeta", "Lonely Planet", "Museo Thyssen-Bornemisza", "Escuela de Escritores", "Sociedad Geográfica Española"],
+        faq: [
+          {
+            q: "¿Trabajáis con autores individuales?",
+            a: "Sí. Ayudamos a autores emergentes y consolidados a construir una marca personal coherente, que venda libros sin traicionar la voz del autor.",
+          },
+          {
+            q: "¿Hacéis prensa?",
+            a: "Diseñamos la estrategia de comunicación completa y coordinamos la relación con medios y prescriptores cuando el proyecto lo requiere.",
+          },
+          {
+            q: "¿Con cuánta antelación hay que empezar un lanzamiento?",
+            a: "Lo ideal es entre tres y seis meses antes de la fecha de publicación o inauguración. Con menos tiempo también se puede, pero se renuncia a construir expectativa.",
+          },
+        ],
+      },
+      {
+        slug: "despachos-profesionales",
+        num: "02",
+        title: "Despachos y servicios profesionales",
+        short: "Abogados, consultoras, asesorías y firmas de servicios.",
+        heroTitle: "Que te elijan por lo que sabes hacer, no por lo que cobras.",
+        heroSub:
+          "Marketing jurídico y de servicios profesionales: posicionamiento, marca y captación de clientes para despachos que quieren crecer sin perder prestigio.",
+        pains: [
+          "Casi todos tus clientes llegan por recomendación, y eso no escala.",
+          "Tu web se parece a la de cualquier otro despacho.",
+          "Compites por precio porque el cliente no ve la diferencia.",
+          "Los socios no tienen tiempo para comunicar lo que saben.",
+        ],
+        services: [
+          "Posicionamiento y especialización del despacho",
+          "Marca, naming e identidad corporativa",
+          "Web orientada a captación de consultas",
+          "Marca personal de socios en LinkedIn",
+          "Contenido experto y SEO local",
+          "Plan de marketing para firmas en crecimiento",
+        ],
+        clients: ["Bennet & Rey Abogados", "Valentín Gamazo Abogados", "Camacho & Aparicio", "LC Rodrigo Abogados", "FTr Consultants", "Sergat"],
+        faq: [
+          {
+            q: "¿Es compatible el marketing con la deontología de la abogacía?",
+            a: "Totalmente. Trabajamos desde hace años con despachos y conocemos los límites: comunicamos conocimiento y confianza, nunca promesas de resultado.",
+          },
+          {
+            q: "¿Trabajáis con despachos pequeños?",
+            a: "Sí, y es donde más se nota el impacto. Muchos de nuestros clientes empezaron con uno o dos socios.",
+          },
+          {
+            q: "¿Cuánto tarda en notarse?",
+            a: "El posicionamiento y la marca se notan desde el primer día en cómo te perciben. La captación constante suele consolidarse entre los seis y los doce meses.",
+          },
+        ],
+      },
+      {
+        slug: "turismo-experiencias",
+        num: "03",
+        title: "Turismo y experiencias",
+        short: "Agencias de viajes, destinos, escuelas de idiomas y experiencias culturales.",
+        heroTitle: "Que viajen contigo porque nadie más cuenta el viaje como tú.",
+        heroSub:
+          "Estrategia digital, marca y comunicación para agencias boutique, destinos y experiencias culturales que compiten contra gigantes y buscadores.",
+        pains: [
+          "Los grandes portales y buscadores se quedan con tu cliente.",
+          "Tu propuesta es única, pero en internet parece una más.",
+          "Dependes de temporadas y de campañas de última hora.",
+          "No tienes una comunidad propia de viajeros fieles.",
+        ],
+        services: [
+          "Estrategia digital y reposicionamiento de agencia",
+          "Storytelling de destinos y experiencias",
+          "Contenido y redes para viajeros culturales",
+          "Newsletter y comunidad propia",
+          "Comunicación de destinos e instituciones turísticas",
+          "Lanzamiento de nuevas rutas y productos",
+        ],
+        clients: ["Lonely Planet", "Viajes Nieva", "Viajes Sakai", "Turismo Castilla-La Mancha", "ComeMai", "Studiainitalia"],
+        faq: [
+          {
+            q: "¿Trabajáis con destinos e instituciones públicas?",
+            a: "Sí, hemos trabajado con destinos y centros de interpretación turística, además de agencias privadas.",
+          },
+          {
+            q: "¿Podéis ayudarnos a depender menos de los grandes portales?",
+            a: "Es uno de nuestros objetivos habituales: construir marca, comunidad y canales propios para que el viajero te busque a ti.",
+          },
+          {
+            q: "¿Gestionáis campañas de publicidad?",
+            a: "Sí, las integramos en la estrategia cuando tienen sentido, siempre con objetivos y métricas claras.",
+          },
+        ],
+      },
+    ],
+  },
+  services: {
+    kicker: "Servicios",
+    title: "Pocas cosas. Muy bien hechas.",
+    sub: "Somos tu cabeza estratégica cuando necesitas claridad, y tus manos cuando tienes claridad pero no tiempo.",
+    items: [
+      {
+        num: "01",
+        title: "Estrategia y posicionamiento",
+        desc: "Analizamos tu marca, tu entorno y tu competencia para encontrar el lugar que solo tú puedes ocupar. Y lo convertimos en un plan.",
+        bullets: ["Auditoría de marketing y comunicación", "Análisis del entorno y la competencia", "Plan de marketing y plan estratégico", "Reposicionamiento de marca"],
+      },
+      {
+        num: "02",
+        title: "Marca e identidad",
+        desc: "Creamos la imagen y la voz de tu proyecto a partir de tus ideas y valores: desde el nombre hasta el último soporte.",
+        bullets: ["Naming", "Logo e identidad corporativa", "Identidad verbal y narrativa de marca", "Manual de marca"],
+      },
+      {
+        num: "03",
+        title: "Web, contenidos y redes",
+        desc: "Nos encanta comunicar y contar historias. Construimos presencia digital que atrae a las personas adecuadas y las convierte en clientes.",
+        bullets: ["Diseño y desarrollo web", "Estrategia de social media y community management", "Social Ads", "Monitorización y reputación online"],
+      },
+      {
+        num: "04",
+        title: "Acompañamiento estratégico",
+        desc: "Tu director de marketing externo: cercano, profesional y diferente. Para marcas que quieren un socio, no un proveedor.",
+        bullets: ["Dirección de marketing externa", "Coaching a fundadores y emprendedores", "Marca personal", "Formación a equipos"],
+      },
+    ],
+  },
+  method: {
+    kicker: "Cómo trabajamos",
+    title: "Del briefing al resultado, sin atajos.",
+    steps: [
+      { title: "Escuchamos", desc: "Reivindicamos el briefing. Entendemos lo que nos dices y lo que quieres decir pero no dices." },
+      { title: "Miramos de lado", desc: "Estudiamos tu mercado y tu competencia hasta encontrar el ángulo que nadie está usando." },
+      { title: "Construimos", desc: "Estrategia, marca y comunicación con un plan claro, medible y realista." },
+      { title: "Acompañamos", desc: "Ejecutamos, medimos y ajustamos contigo. El acompañamiento es parte de la promesa." },
+    ],
+  },
+  cases: {
+    kicker: "Casos",
+    title: "Marcas que ya se ven distinto.",
+    sub: "Algunos proyectos con los que hemos trabajado. En los casos confidenciales mantenemos el anonimato del cliente.",
+    confidential: "Caso confidencial",
+    challenge: "El reto",
+    angle: "El ángulo",
+    result: "El resultado",
+    items: [
+      {
+        sector: "cultura-editorial",
+        client: "Editorial Planeta",
+        anonymous: false,
+        title: "Más presencia de marca en un negocio que cambia cada día",
+        challenge: "Un sector con cambios constantes, lanzamientos continuos y la necesidad de adaptarse a la improvisación.",
+        angle: "Análisis continuo de cada acción y una estrategia de redes flexible, capaz de reaccionar sin perder coherencia.",
+        result: "Mejora de la presencia de la marca y un aumento notable de seguidores.",
+        metrics: [],
+      },
+      {
+        // EJEMPLO: cifras ilustrativas, cliente anónimo
+        sector: "cultura-editorial",
+        client: "Sello editorial independiente · Barcelona",
+        anonymous: true,
+        title: "Una novela debut que agotó tres ediciones",
+        challenge: "Autora desconocida, presupuesto limitado y una fecha de lanzamiento compitiendo con las grandes novedades de otoño.",
+        angle: "En vez de vender el libro, vendimos la conversación: un club de lectura previo con libreros y lectores prescriptores.",
+        result: "El libro llegó a librerías con lista de espera y la prensa vino detrás.",
+        metrics: [
+          { value: "3", label: "reediciones en 5 meses" },
+          { value: "+186%", label: "preventas vs. lanzamiento anterior" },
+          { value: "41", label: "apariciones en medios" },
+        ],
+      },
+      {
+        sector: "despachos-profesionales",
+        client: "Bennet & Rey Abogados",
+        anonymous: false,
+        title: "Posicionar un despacho desde el primer día",
+        challenge: "Un despacho que empezaba y no sabía cómo posicionarse en el mercado ni cómo llegar a sus clientes.",
+        angle: "Escucha profunda del proyecto para convertir su diferencia en herramientas de marketing concretas.",
+        result: "Ideas y herramientas que se convirtieron en la base de su marketing.",
+        metrics: [],
+      },
+      {
+        // EJEMPLO: cifras ilustrativas, cliente anónimo
+        sector: "despachos-profesionales",
+        client: "Despacho boutique de derecho mercantil · Madrid",
+        anonymous: true,
+        title: "De depender del boca a boca a llenar la agenda",
+        challenge: "Cuatro socios brillantes, una web genérica y el 90% de los clientes llegando por recomendación.",
+        angle: "Dejamos de hablar de “servicios integrales” y posicionamos al despacho como el especialista en operaciones de empresa familiar.",
+        result: "Consultas más cualificadas, mejor ticket medio y los socios como referentes en su nicho.",
+        metrics: [
+          { value: "4 → 17", label: "consultas cualificadas al mes" },
+          { value: "+32%", label: "honorario medio por asunto" },
+          { value: "9", label: "meses para conseguirlo" },
+        ],
+      },
+      {
+        sector: "turismo-experiencias",
+        client: "Viajes Nieva",
+        anonymous: false,
+        title: "Repensar una agencia ante la encrucijada digital",
+        challenge: "Una agencia en un mercado turístico cambiante, frente a nuevas formas de búsqueda y recomendación de viajes.",
+        angle: "Visión estratégica para adelantarse a los acontecimientos y redefinir el papel de la agencia boutique.",
+        result: "Decisiones clave para su desarrollo como empresa.",
+        metrics: [],
+      },
+      {
+        // EJEMPLO: cifras ilustrativas, cliente anónimo
+        sector: "turismo-experiencias",
+        client: "Agencia de viajes culturales · Madrid",
+        anonymous: true,
+        title: "Viajeros que reservan sin pasar por los portales",
+        challenge: "Competía en precio contra plataformas gigantes con un producto que no se parecía en nada al suyo.",
+        angle: "Convertimos a los guías en protagonistas y lanzamos una newsletter con relatos de cada ruta.",
+        result: "Una comunidad propia que reserva directamente y paga por la experiencia, no por el precio.",
+        metrics: [
+          { value: "38%", label: "reservas desde la newsletter" },
+          { value: "+24%", label: "ticket medio por viajero" },
+          { value: "6.200", label: "suscriptores en un año" },
+        ],
+      },
+    ],
+  },
+  testimonials: {
+    kicker: "Opiniones",
+    title: "Lo que dicen quienes ya han trabajado con nosotros.",
+    items: [
+      {
+        quote:
+          "En un negocio como el nuestro en el que hay cambios constantemente es muy importante contar con una persona como Nacho Latorre capaz de adaptarse a las improvisaciones. Su análisis y su conocimiento sobre las redes sociales nos ha permitido mejorar la presencia de la marca y aumentar notablemente en seguidores.",
+        name: "Laura Franch",
+        role: "Directora de Comunicación",
+        company: "Editorial Planeta",
+      },
+      {
+        quote:
+          "A los escritores nos pierden los detalles, la visión microscópica. Siguiendo con el símil literario, Nacho Latorre sería un experto en dar verosimilitud a tu relato, en este caso, a tu negocio. Sus análisis y consejos han sido una ayuda fundamental para nosotros.",
+        name: "Germán Solís",
+        role: "Subdirector",
+        company: "Escuela de Escritores",
+      },
+      {
+        quote:
+          "Su visión estratégica, su capacidad de adelantarse a los acontecimientos y sus profundos conocimientos del marketing y el mundo digital nos ayudó a tomar decisiones que han sido claves para nuestro desarrollo como empresa.",
+        name: "Paloma Nieva",
+        role: "Socia fundadora",
+        company: "Viajes Sakai y Viajes Nieva",
+      },
+      {
+        quote:
+          "Una de las mejores ideas que tuvimos fue la de contratar a Lateral Zinkin. Comenzábamos nuestro negocio y no sabíamos cómo posicionarnos en el mercado. Las ideas de Nacho se han convertido en valiosas herramientas de marketing para nuestra empresa.",
+        name: "Margaret Hauschild",
+        role: "Socia directora",
+        company: "Bennet & Rey Lawyers",
+      },
+      {
+        quote:
+          "Nacho Latorre realizó junto a su equipo un muy buen trabajo de reposicionamiento de nuestra marca. Esta labor ha hecho que hayamos aumentado las ventas, así como mejorado nuestra imagen de marca, que era lo que buscábamos.",
+        name: "Alberto Gutiérrez",
+        role: "Director general",
+        company: "ElPeriódicoDeTuDía",
+      },
+      {
+        quote:
+          "No sólo hemos mejorado nuestras ventas y nuestra competitividad en el mercado, sino que en los momentos más cruciales, sus palabras de apoyo y de análisis externo han sido clave para seguir y mejorar con nuestro proyecto.",
+        name: "Francesca Murru",
+        role: "Socia fundadora",
+        company: "ComeMai",
+      },
+      {
+        quote:
+          "Un partner eficiente y eficaz que mejora la visión de tu negocio, acompaña en el crecimiento de tu empresa y siempre tiene un asesoramiento inteligente disponible.",
+        name: "Nina Morillas",
+        role: "Fundadora y directora",
+        company: "Pinkus y María Wolff",
+      },
+      {
+        quote:
+          "El trato de Nacho fue muy estrecho, cercano y profesional en todo momento. Su análisis de nuestra situación en marketing y comunicación resultó muy acertado.",
+        name: "Antonio Lence",
+        role: "Director general",
+        company: "Viena Capellanes",
+      },
+    ],
+    translated: "",
+  },
+  founder: {
+    kicker: "Quién hay detrás",
+    name: "Nacho Latorre Tambo",
+    role: "Socio fundador · Consultor · Profesor de marketing",
+    teaser:
+      "Desde 2007, Nacho ha acompañado a editoriales, museos, despachos y agencias de viajes a encontrar su ángulo. Detrás, un grupo flexible de profesionales con décadas de experiencia.",
+    bio: [
+      "Licenciado en Derecho y diplomado en Ciencias Empresariales por ICADE, con un Máster en Dirección Comercial y Marketing, Nacho fundó Lateral Zinkin en 2007 con una idea sencilla: que el marketing externo podía ser cercano, profesional y diferente.",
+      "Es experto en marketing de servicios y despachos profesionales, marketing para emprendedores, redes sociales y transformación digital. Ha colaborado en la gestión de redes sociales de Lonely Planet España y ha trabajado con marcas como Editorial Planeta, Museo Thyssen-Bornemisza o Escuela de Escritores.",
+      "Compagina la consultoría con la docencia como profesor de marketing en IMF Smart Education, formando a los profesionales que hoy dirigen el marketing de muchas empresas.",
+    ],
+    credentials: [
+      "Derecho y Empresariales · ICADE",
+      "Máster en Dirección Comercial y Marketing",
+      "Profesor de marketing · IMF Smart Education",
+      "Experto en marketing jurídico y de servicios",
+    ],
+    quote: "El valor de una consultora está en generar estrategias y creatividad que lleguen con eficacia a los clientes de nuestros clientes.",
+    photoAlt: "Retrato de Nacho Latorre Tambo",
+    yearsLabel: "años",
+    cta: "Conoce a Nacho",
+    team: "Un equipo flexible",
+    teamDesc:
+      "Según cada proyecto sumamos a diseñadores, desarrolladores, redactores y especialistas en medios con décadas de experiencia. Siempre con Nacho al frente: nada de cuentas que pasan de junior en junior.",
+  },
+  quizTeaser: {
+    kicker: "Test gratuito · 3 minutos",
+    title: "¿Cómo de visible es tu marca?",
+    sub: "Ocho preguntas para medir la claridad, diferenciación, visibilidad y conversión de tu marca. Recibirás un diagnóstico personalizado con recomendaciones concretas.",
+    cta: "Empezar el test",
+    bullets: ["Claridad", "Diferenciación", "Visibilidad", "Conversión"],
+  },
+  newsletter: {
+    kicker: "Newsletter",
+    title: "Ideas laterales, una vez al mes.",
+    sub: "Casos, herramientas y reflexiones sobre marketing para marcas con historia. Sin ruido. Te puedes dar de baja cuando quieras.",
+    cta: "Suscribirme en Substack",
+  },
+  finalCta: {
+    title: "¿Hablamos de tu marca?",
+    sub: "Una sesión estratégica de 30 minutos. Nos cuentas tu proyecto, te damos una primera lectura honesta y decides si seguimos. Sin compromiso.",
+    primary: "Reserva tu sesión",
+    secondary: "o escríbenos por WhatsApp",
+  },
+  contact: {
+    kicker: "Contacto",
+    title: "Hablemos de tu marca.",
+    sub: "Reserva directamente una sesión estratégica o cuéntanos tu proyecto y te respondemos en menos de 24 horas laborables.",
+    bookingTitle: "Reserva tu sesión estratégica",
+    bookingSub: "30 minutos por videollamada. Gratis y sin compromiso.",
+    bookingPending: "Muy pronto podrás reservar aquí directamente. Mientras tanto, déjanos tus datos y te proponemos horario.",
+    formTitle: "Cuéntanos tu proyecto",
+    form: {
+      name: "Nombre",
+      email: "Email",
+      company: "Empresa o proyecto",
+      phone: "Teléfono (opcional)",
+      sector: "Sector",
+      sectorOptions: ["Cultura y editorial", "Despacho o servicios profesionales", "Turismo y experiencias", "Otro"],
+      budget: "Inversión mensual aproximada",
+      budgetOptions: ["Aún no lo sé", "Menos de 1.000 €", "1.000 – 3.000 €", "3.000 – 6.000 €", "Más de 6.000 €"],
+      message: "¿Qué quieres conseguir?",
+      messagePlaceholder: "Cuéntanos en qué estás trabajando y qué te gustaría lograr.",
+      consentA: "He leído y acepto la",
+      consentLink: "política de privacidad",
+      submit: "Enviar",
+      sending: "Enviando…",
+      success: "¡Recibido! Te escribiremos en menos de 24 horas laborables.",
+      error: "No hemos podido enviar el formulario. Escríbenos directamente a",
+      required: "Revisa los campos obligatorios.",
+    },
+    details: {
+      phoneLabel: "Teléfono",
+      whatsappLabel: "WhatsApp",
+      whatsappText: "Escríbenos por WhatsApp",
+      emailLabel: "Email",
+      addressLabel: "Estudio",
+    },
+  },
+  quiz: {
+    title: "Test de visibilidad de marca",
+    intro: "Responde con sinceridad. No hay respuestas buenas ni malas: solo un punto de partida.",
+    start: "Empezar",
+    step: "Pregunta",
+    of: "de",
+    back: "Anterior",
+    dims: {
+      clarity: "Claridad",
+      difference: "Diferenciación",
+      visibility: "Visibilidad",
+      conversion: "Conversión",
+    },
+    questions: [
+      {
+        dim: "clarity",
+        q: "Si alguien entra en tu web por primera vez, ¿entiende en cinco segundos qué haces y para quién?",
+        options: ["No tengo web o está desactualizada", "Creo que no del todo", "Más o menos", "Sí, sin ninguna duda"],
+      },
+      {
+        dim: "clarity",
+        q: "¿Tienes definido por escrito tu posicionamiento y tu cliente ideal?",
+        options: ["No", "Lo tengo en la cabeza", "Sí, pero no lo usamos", "Sí, y guía todo lo que comunicamos"],
+      },
+      {
+        dim: "difference",
+        q: "¿Qué te diferencia de tu competencia?",
+        options: ["No lo tengo claro", "El precio", "La calidad y el trato cercano", "Algo concreto que solo nosotros hacemos"],
+      },
+      {
+        dim: "difference",
+        q: "Si quitas el logo de tu web y el de tu competencia, ¿se distinguen?",
+        options: ["Serían casi iguales", "Se parecerían bastante", "Algo se nota", "Somos inconfundibles"],
+      },
+      {
+        dim: "visibility",
+        q: "¿Cómo te encuentran la mayoría de tus nuevos clientes?",
+        options: ["Casi solo por boca a boca", "Redes sociales de forma irregular", "Varias fuentes, sin plan", "Google, contenido, prensa y recomendación con un plan"],
+      },
+      {
+        dim: "visibility",
+        q: "¿Con qué frecuencia publicas contenido con criterio (artículos, redes, newsletter)?",
+        options: ["Casi nunca", "Cuando hay tiempo", "Todos los meses", "Cada semana, con calendario"],
+      },
+      {
+        dim: "conversion",
+        q: "Cuando alguien interesado visita tu web, ¿qué ocurre después?",
+        options: ["Nada, no hay forma clara de contactar", "Un email o un formulario genérico", "Un formulario y respondemos rápido", "Un camino claro: reservar, descargar o suscribirse"],
+      },
+      {
+        dim: "conversion",
+        q: "¿Sabes cuántos contactos te llegan al mes y de qué canal vienen?",
+        options: ["Ni idea", "Una intuición", "Aproximadamente", "Sí, lo medimos todo"],
+      },
+    ],
+    gate: {
+      title: "Tu diagnóstico está listo.",
+      sub: "Déjanos tu email para ver el informe completo con tus puntuaciones y recomendaciones. También te lo enviaremos por correo.",
+      name: "Nombre",
+      email: "Email",
+      sector: "Sector",
+      consent: "Acepto la política de privacidad y recibir el diagnóstico por email.",
+      submit: "Ver mi diagnóstico",
+      preview: "Tu puntuación global",
+    },
+    results: {
+      title: "Tu diagnóstico",
+      overall: "Puntuación global",
+      tiers: [
+        {
+          min: 0,
+          title: "Marca invisible",
+          desc: "Tu marca tiene mucho que contar, pero ahora mismo el mercado no la está escuchando. La buena noticia: es donde más rápido se notan los cambios.",
+        },
+        {
+          min: 40,
+          title: "Potencial dormido",
+          desc: "Tienes bases sólidas, pero hay fugas importantes entre lo que eres y lo que el mercado percibe. Con el ángulo adecuado, el salto puede ser grande.",
+        },
+        {
+          min: 70,
+          title: "Lista para despegar",
+          desc: "Tu marca está bien construida. El siguiente nivel está en afinar la diferenciación y escalar lo que ya funciona.",
+        },
+      ],
+      recsTitle: "Nuestras recomendaciones",
+      recs: {
+        clarity: "Define por escrito para quién eres y qué problema resuelves, y haz que tu portada lo diga en una frase.",
+        difference: "Busca tu ángulo: ese algo que solo tú puedes decir. Si tu competencia podría firmar tu mensaje, todavía no lo has encontrado.",
+        visibility: "Construye canales propios y constantes: contenido experto, newsletter y relación con prescriptores. El boca a boca no escala solo.",
+        conversion: "Diseña un camino claro para cada visitante: reservar una llamada, descargar algo útil o suscribirse. Y mídelo.",
+      },
+      allGood: "Tus cuatro áreas están en buena forma. Hablemos de cómo escalar lo que ya funciona.",
+      nextTitle: "¿Y ahora?",
+      nextSub: "Revisamos tu diagnóstico contigo en una sesión estratégica gratuita de 30 minutos.",
+      bookCta: "Reservar sesión",
+      newsletterCta: "Recibir ideas laterales",
+      retake: "Repetir el test",
+    },
+  },
+  footer: {
+    claim: "Ideas & Marketing para marcas con historia.",
+    rights: "Todos los derechos reservados.",
+    legal: { aviso: "Aviso legal", privacidad: "Privacidad", cookies: "Cookies" },
+    explore: "Explora",
+    contact: "Contacto",
+    follow: "Síguenos",
+  },
+  pages: {
+    services: { title: "Servicios", sub: "Estrategia, marca y comunicación. Cabeza y manos." },
+    sectors: { title: "Sectores" },
+    cases: { title: "Casos", sub: "Proyectos, retos y resultados." },
+    about: { title: "Nacho Latorre Tambo" },
+    test: { title: "Test de visibilidad de marca", sub: "3 minutos. 8 preguntas. Un diagnóstico honesto." },
+    contact: { title: "Contacto" },
+    legalNote: "",
+  },
+};
+
+export type Dict = typeof es;
