@@ -203,7 +203,7 @@ Una palabra clave principal por página, para evitar que dos páginas compitan e
 
 ## Anexo: formato de un artículo en `content/ideas/`
 
-Cuando exista la sección `/ideas`, cada artículo será un Markdown con esta cabecera (el verificador ya la comprueba si la carpeta existe):
+Cada artículo es un Markdown en `content/ideas/` (un archivo por idioma, p. ej. `es-mi-articulo.md`) con esta cabecera. La web lo publica en `/{idioma}/ideas/{slug}` y el verificador la comprueba:
 
 ```md
 ---
@@ -219,6 +219,10 @@ updated: 2026-10-06
 experience: "Despacho X (2025): qué hicimos y qué cambió, con datos verificables"  # prueba de ganancia de información (obligatorio)
 sources:
   - https://www.abogacia.es/...
-aiAssisted: true               # si se usó IA de forma relevante
+aiAssisted: true               # si se usó IA de forma relevante (muestra la nota de transparencia)
+draft: true                    # borrador: visible en local y previsualizaciones, nunca en producción
 ---
 ```
+
+- Para publicar un borrador: completar los huecos `[PENDIENTE: …]`, cambiar `draft: true` por `draft: false` y fusionar en `main`. El verificador da error si un artículo publicado conserva huecos pendientes.
+- Las traducciones usan su propio `slug` y `translationOf: <slug del original>`; la web enlaza las versiones entre sí (hreflang).

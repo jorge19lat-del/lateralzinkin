@@ -40,6 +40,7 @@ export default function Header({ locale, t }: { locale: string; t: Dict }) {
     { label: t.nav.services, path: paths.services },
     { label: t.nav.sectors, path: `${paths.sectors}/cultura-editorial`, match: paths.sectors },
     { label: t.nav.cases, path: paths.cases },
+    { label: t.nav.ideas, path: paths.ideas },
     { label: t.nav.about, path: paths.about },
     { label: t.nav.test, path: paths.test },
   ];
