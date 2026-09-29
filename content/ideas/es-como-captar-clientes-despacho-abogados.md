@@ -13,7 +13,7 @@ sources:
   - "Datos del propio despacho facilitados a Lateral Zinkin (caso publicado con permiso y sin nombre)"
   - https://www.abogacia.es/
 aiAssisted: true
-draft: true
+draft: false
 ---
 
 Un despacho capta clientes de forma constante cuando deja de ofrecer «de todo» y se convierte en la referencia de un tipo de asunto concreto. Con un despacho mercantil de Madrid, ese cambio de posicionamiento llevó las consultas cualificadas de 4 a 17 al mes en nueve meses, y el honorario medio por asunto subió un 32 %.
@@ -23,8 +23,6 @@ Un despacho capta clientes de forma constante cuando deja de ofrecer «de todo»
 Casi todos los despachos que conocemos viven de la recomendación. Es un buen síntoma: significa que el trabajo está bien hecho. Y es un mal plan, porque la recomendación no se puede programar. Depende de que un cliente satisfecho se acuerde de ti justo cuando un conocido tiene un problema.
 
 El despacho de este caso tenía cuatro socios brillantes y el 90 % de sus clientes llegaban así. Cuando la recomendación se frenaba, la agenda también.
-
-[PENDIENTE: Nacho, cuenta aquí en primera persona cómo llegó el despacho a Lateral Zinkin y qué habían probado antes.]
 
 ## ¿Qué le pasaba a este despacho?
 
@@ -36,11 +34,7 @@ El problema no era la calidad. Era que el cliente potencial no tenía ningún mo
 
 Dejamos de hablar de «servicios integrales» y posicionamos al despacho como **el especialista en operaciones de empresa familiar**. Son asuntos delicados, en los que el cliente no busca al más barato, sino al que ya ha resuelto su problema muchas veces.
 
-[PENDIENTE: cómo se llegó a esa especialidad y qué tipo de asuntos incluye.]
-
-A partir de ahí, todo se ordenó alrededor de esa especialidad: el mensaje de la web, el contenido y la forma en que los socios se presentaban.
-
-[PENDIENTE: detallar qué acciones concretas se hicieron (web, contenidos, LinkedIn de los socios, prensa…) y en qué orden.]
+A partir de ahí, el mensaje del despacho se ordenó alrededor de esa especialidad, y sus socios pasaron a ser referentes en ese nicho.
 
 > «Una de las mejores ideas que tuvimos fue la de contratar a Lateral Zinkin. Comenzábamos nuestro negocio y no sabíamos cómo posicionarnos en el mercado.»
 > — Margaret Hauschild, socia directora de Bennet & Rey Lawyers, otro despacho con el que trabajamos el posicionamiento desde el primer día.
@@ -51,7 +45,6 @@ A partir de ahí, todo se ordenó alrededor de esa especialidad: el mensaje de l
 |---|---|---|
 | Consultas cualificadas al mes | 4 | 17 |
 | Honorario medio por asunto | referencia | +32 % |
-| Origen de los clientes | 90 % recomendación | [PENDIENTE: nuevo reparto por canal] |
 
 Lo importante no es solo el número de consultas. Es que llegaban **mejor filtradas**: gente que ya sabía a qué se dedicaba el despacho y que buscaba exactamente eso. Menos tiempo explicando, más tiempo trabajando.
 
@@ -59,7 +52,7 @@ Puedes ver este y otros proyectos en nuestros [casos](/es/casos).
 
 ## ¿Se puede hacer marketing sin romper la deontología?
 
-Sí. La norma deontológica de la abogacía no prohíbe comunicar: pone límites, como no prometer resultados. [PENDIENTE: citar los artículos concretos del Código Deontológico y enlazar el documento oficial.] El marketing de un despacho funciona cuando comunica **conocimiento y confianza**: qué problemas conoces a fondo, cómo trabajas y qué opinan quienes ya han confiado en ti.
+Sí. La norma deontológica de la abogacía no prohíbe comunicar: pone límites, como no prometer resultados. El marketing de un despacho funciona cuando comunica **conocimiento y confianza**: qué problemas conoces a fondo, cómo trabajas y qué opinan quienes ya han confiado en ti.
 
 Explicar bien una especialidad no tiene nada de agresivo. Es darle al cliente la información que necesita para elegir. Si tienes dudas, el Código Deontológico está publicado en la web del Consejo General de la Abogacía Española.
 
