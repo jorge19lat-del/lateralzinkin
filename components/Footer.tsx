@@ -21,6 +21,7 @@ export default function Footer({ locale, t }: { locale: string; t: Dict }) {
                 <li key={s.slug}><Link href={sectorHref(locale, s.slug)}>{s.title}</Link></li>
               ))}
               <li><Link href={href(locale, paths.cases)}>{t.nav.cases}</Link></li>
+              <li><Link href={href(locale, paths.ideas)}>{t.nav.ideas}</Link></li>
               <li><Link href={href(locale, paths.about)}>{t.founder.name}</Link></li>
               <li><Link href={href(locale, paths.test)}>{t.quiz.title}</Link></li>
             </ul>

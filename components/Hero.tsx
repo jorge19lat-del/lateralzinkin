@@ -39,31 +39,29 @@ export default function Hero({ locale, t }: { locale: string; t: Dict }) {
         <div className="bang__dot" />
       </motion.div>
 
+      {/* El texto se pinta en el HTML desde el primer momento (bueno para el LCP y sin depender de JS);
+          la entrada es una animación CSS suave que nunca lo oculta. */}
       <div className="wrap">
-        <motion.p className="hero__eyebrow" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+        <p className="hero__eyebrow hero-in" style={{ animationDelay: "0ms" }}>
           <span className="hero__dot" />
           {t.hero.eyebrow}
-        </motion.p>
+        </p>
         <motion.h1 className="display h1 hero__title" style={{ y: titleY }}>
           {lines.map((line, i) => (
             <span className="line" key={i}>
-              <motion.span
-                initial={reduce ? false : { y: "110%" }}
-                animate={{ y: "0%" }}
-                transition={{ duration: 1.1, delay: 0.1 + i * 0.09, ease }}
-              >
+              <span className="hero-in" style={{ animationDelay: `${60 + i * 70}ms` }}>
                 {line}
-              </motion.span>
+              </span>
             </span>
           ))}
         </motion.h1>
       </div>
 
       <div className="wrap hero__bottom">
-        <motion.p className="lead" initial={reduce ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.6, ease }}>
+        <p className="lead hero-in" style={{ animationDelay: "380ms" }}>
           {t.hero.sub}
-        </motion.p>
-        <motion.div initial={reduce ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.75, ease }}>
+        </p>
+        <div className="hero-in" style={{ animationDelay: "460ms" }}>
           <div className="hero__actions">
             <Link href={href(locale, paths.contact)} className="btn">
               {t.hero.primary} <span className="arrow">→</span>
@@ -73,7 +71,7 @@ export default function Hero({ locale, t }: { locale: string; t: Dict }) {
             </Link>
           </div>
           <p className="hero__note">{t.common.free}</p>
-        </motion.div>
+        </div>
       </div>
 
       <div className="scroll-hint" aria-hidden="true">

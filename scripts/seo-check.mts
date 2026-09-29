@@ -98,11 +98,12 @@ if (existsSync(ideasDir)) {
     const meta: Record<string, string> = {};
     for (const line of fm[1].split("\n")) {
       const m = line.match(/^(\w+):\s*(.*?)\s*(#.*)?$/);
-      if (m) meta[m[1]] = m[2].replace(/^["']|["']$/g, "");
+      if (m) meta[m[1]] = m[2].replace(/^["']|["']$/g, "") === "null" ? "" : m[2].replace(/^["']|["']$/g, "");
     }
-    for (const key of required) if (!(key in meta) || meta[key] === "") errors.push(`${file}: falta «${key}» en la cabecera`);
+    for (const key of required) if (!(key in meta) || (meta[key] === "" && key !== "sources")) errors.push(`${file}: falta «${key}» en la cabecera`);
+    if (/\[PENDIENTE/.test(raw)) (meta.draft === "true" ? warnings : errors).push(`${file}: tiene huecos [PENDIENTE] por completar${meta.draft === "true" ? " (borrador)" : " y no es borrador"}`);
     if (meta.sources === "" && !/sources:\s*\n\s*-/.test(fm[1])) errors.push(`${file}: añade al menos una fuente en «sources»`);
-    if (meta.title) checkLength("title", file, meta.title);
+    if (meta.title) checkLength("title", file, meta.title + BRAND);
     if (meta.description) checkLength("description", file, meta.description);
     if (meta.slug && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(meta.slug)) errors.push(`${file}: slug inválido "${meta.slug}" (minúsculas, sin tildes, guiones)`);
     const k = `${meta.locale}:${(meta.keyword || "").toLowerCase()}`;

@@ -6,6 +6,7 @@ export const paths = {
   sectors: "/sectores",
   cases: "/casos",
   about: "/nacho",
+  ideas: "/ideas",
   test: "/test",
   contact: "/contacto",
   legal: "/legal",
