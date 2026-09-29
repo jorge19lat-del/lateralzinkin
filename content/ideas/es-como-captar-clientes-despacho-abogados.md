@@ -37,6 +37,7 @@ Dejamos de hablar de «servicios integrales» y posicionamos al despacho como **
 A partir de ahí, el mensaje del despacho se ordenó alrededor de esa especialidad, y sus socios pasaron a ser referentes en ese nicho.
 
 > «Una de las mejores ideas que tuvimos fue la de contratar a Lateral Zinkin. Comenzábamos nuestro negocio y no sabíamos cómo posicionarnos en el mercado.»
+>
 > — Margaret Hauschild, socia directora de Bennet & Rey Lawyers, otro despacho con el que trabajamos el posicionamiento desde el primer día.
 
 ## ¿Qué cambió en nueve meses?

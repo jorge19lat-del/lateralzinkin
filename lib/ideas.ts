@@ -20,12 +20,34 @@ export type Idea = {
   aiAssisted: boolean;
   draft: boolean;
   html: string;
+  toc: { id: string; text: string }[];
   minutes: number;
 };
 
 const DIR = join(process.cwd(), "content/ideas");
 // Los borradores se ven en local y en las previsualizaciones, nunca en producción
 const showDrafts = process.env.VERCEL_ENV !== "production";
+
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+// Añade un id a cada H2 y devuelve el índice del artículo
+function withToc(html: string) {
+  const toc: { id: string; text: string }[] = [];
+  const out = html.replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, "").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, "&");
+    const id = slugify(text);
+    toc.push({ id, text });
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+  return { html: out, toc };
+}
 
 const iso = (v: unknown) => (v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? ""));
 
@@ -53,7 +75,7 @@ export function allIdeas(): Idea[] {
         translationOf: data.translationOf ? String(data.translationOf) : null,
         aiAssisted: Boolean(data.aiAssisted),
         draft: Boolean(data.draft),
-        html: marked.parse(content, { async: false }) as string,
+        ...withToc(marked.parse(content, { async: false }) as string),
         minutes: Math.max(1, Math.round(words / 220)),
       };
     })

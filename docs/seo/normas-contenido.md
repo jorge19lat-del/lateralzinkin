@@ -135,7 +135,7 @@ Una palabra clave principal por página, para evitar que dos páginas compitan e
 
 - Toda pieza lleva **autor real** con enlace a su bio. Por defecto, Nacho Latorre Tambo.
 - La bio de `/nacho` enlaza pruebas externas: IMF, LinkedIn, ponencias y prensa.
-- **Transparencia**: si la IA se ha usado de forma relevante, se puede añadir al final una línea como «Escrito por Nacho Latorre con ayuda de herramientas de IA para la documentación. Revisado y verificado por el autor.». Google lo recomienda cuando el lector esperaría saberlo.
+- **Registro interno del uso de IA**: el campo `aiAssisted` de la cabecera deja constancia de si se usó IA. No se muestra ninguna nota en la web; la garantía de calidad para el lector es la autoría real, las fuentes y la revisión humana.
 - **Nada inventado**: ni cifras marcadas como `EJEMPLO`, ni testimonios, ni logos de clientes sin permiso.
 
 ---
@@ -219,7 +219,7 @@ updated: 2026-10-06
 experience: "Despacho X (2025): qué hicimos y qué cambió, con datos verificables"  # prueba de ganancia de información (obligatorio)
 sources:
   - https://www.abogacia.es/...
-aiAssisted: true               # si se usó IA de forma relevante (muestra la nota de transparencia)
+aiAssisted: true               # uso interno: registra si se usó IA; no se muestra en la web
 draft: true                    # borrador: visible en local y previsualizaciones, nunca en producción
 ---
 ```
