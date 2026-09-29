@@ -831,7 +831,7 @@ ol {
   background: var(--ink);
   color: var(--paper);
   position: relative;
-  overflow: hidden;
+  overflow: clip;
 }
 .lateral__intro {
   padding: clamp(96px, 14vw, 200px) 0 clamp(40px, 6vw, 80px);
@@ -843,40 +843,86 @@ ol {
   margin-top: 32px;
   color: rgba(243, 240, 232, 0.72);
 }
-.chapter {
+/* Cada historia queda fija en pantalla mientras el scroll avanza la animación */
+.chapter-scroll {
   position: relative;
-  display: grid;
-  gap: 28px;
-  padding: clamp(40px, 6vw, 80px) 0;
+  height: 340vh;
   border-top: 1px solid var(--line-light);
 }
+.chapter-scroll.is-static {
+  height: auto;
+}
+.chapter-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 24px;
+  padding: 56px 0 48px;
+}
+.is-static .chapter-sticky {
+  position: relative;
+  height: auto;
+  padding: 56px 0;
+}
 @media (min-width: 960px) {
-  .chapter {
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+  .chapter-sticky {
+    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-rows: 1fr;
     align-items: center;
-    min-height: 88vh;
+    gap: 64px;
+    padding: 72px 0;
   }
-  .chapter:nth-child(even) .chapter__media {
+  .chapter-sticky .chapter__stage {
     order: 2;
   }
+  .chapter-sticky.is-reversed {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  .chapter-sticky.is-reversed .chapter__stage {
+    order: 0;
+  }
 }
-.chapter__media {
+.chapter__stage {
   position: relative;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
+  width: min(100%, calc(50svh * 800 / 560));
+  justify-self: center;
+  aspect-ratio: 800 / 560;
   background: var(--yellow);
   border-radius: var(--radius);
+  overflow: hidden;
 }
-.chapter__media .chapter__img {
-  position: relative;
-  height: 116%;
-  margin-top: -8%;
+@media (min-width: 960px) {
+  .chapter__stage {
+    width: min(100%, calc(74svh * 800 / 560));
+  }
+}
+.scene-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.scene-caption {
+  font-family: var(--f-display);
+  font-weight: 700;
+  fill: var(--ink);
+}
+.chapter__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  height: 2px;
+  background: var(--line-light);
+}
+.chapter__progress i {
+  display: block;
+  height: 100%;
   background: var(--yellow);
-}
-.chapter__media img {
-  filter: grayscale(1) brightness(1.9) contrast(1.5);
-  mix-blend-mode: multiply;
+  transform-origin: left;
 }
 .chapter__num {
   position: absolute;
@@ -894,40 +940,33 @@ ol {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--yellow);
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 .chapter__before {
   font-family: var(--f-display);
   font-weight: 600;
-  font-size: clamp(30px, 4vw, 60px);
+  font-size: clamp(24px, 3.4vw, 54px);
   letter-spacing: -0.035em;
-  line-height: 1;
-  color: rgba(243, 240, 232, 0.4);
-  position: relative;
-  display: inline;
+  line-height: 1.05;
+  color: rgba(243, 240, 232, 0.45);
 }
-.chapter__strike {
-  position: absolute;
-  left: 0;
-  top: 52%;
-  height: 4px;
-  width: 100%;
-  background: var(--yellow);
-  transform-origin: left;
+.chapter__before span {
+  background: linear-gradient(var(--yellow), var(--yellow)) 0 58% / 0% 0.09em no-repeat;
 }
 .chapter__after {
   display: block;
-  margin-top: 14px;
+  margin-top: 10px;
   font-family: var(--f-display);
   font-weight: 700;
-  font-size: clamp(40px, 6vw, 96px);
+  font-size: clamp(34px, 5.4vw, 88px);
   letter-spacing: -0.045em;
   line-height: 0.95;
   color: var(--yellow);
+  will-change: transform, opacity;
 }
 .chapter__lesson {
-  margin-top: 28px;
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: clamp(15px, 1.3vw, 18px);
   color: rgba(243, 240, 232, 0.72);
   max-width: 36ch;
 }
