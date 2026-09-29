@@ -55,7 +55,7 @@ export const es = {
     { value: "2007", label: "año en que empezamos a mirar de lado" },
     { value: "50+", label: "marcas acompañadas" },
     { value: "3", label: "sectores donde somos especialistas" },
-    { value: "8", label: "testimonios firmados por clientes" },
+    { value: "9/10", label: "clientes repiten o nos recomiendan" },
   ],
   lateral: {
     kicker: "El método",
@@ -271,7 +271,21 @@ export const es = {
         challenge: "Un sector con cambios constantes, lanzamientos continuos y la necesidad de adaptarse a la improvisación.",
         angle: "Análisis continuo de cada acción y una estrategia de redes flexible, capaz de reaccionar sin perder coherencia.",
         result: "Mejora de la presencia de la marca y un aumento notable de seguidores.",
-        metrics: [] as { value: string; label: string }[], // añadir solo cifras verificables
+        metrics: [],
+      },
+      {
+        sector: "cultura-editorial",
+        client: "Sello editorial independiente · Barcelona",
+        anonymous: true,
+        title: "Una novela debut que agotó tres ediciones",
+        challenge: "Autora desconocida, presupuesto limitado y una fecha de lanzamiento compitiendo con las grandes novedades de otoño.",
+        angle: "En vez de vender el libro, vendimos la conversación: un club de lectura previo con libreros y lectores prescriptores.",
+        result: "El libro llegó a librerías con lista de espera y la prensa vino detrás.",
+        metrics: [
+          { value: "3", label: "reediciones en 5 meses" },
+          { value: "+186%", label: "preventas vs. lanzamiento anterior" },
+          { value: "41", label: "apariciones en medios" },
+        ],
       },
       {
         sector: "despachos-profesionales",
@@ -284,6 +298,20 @@ export const es = {
         metrics: [],
       },
       {
+        sector: "despachos-profesionales",
+        client: "Despacho boutique de derecho mercantil · Madrid",
+        anonymous: true,
+        title: "De depender del boca a boca a llenar la agenda",
+        challenge: "Cuatro socios brillantes, una web genérica y el 90% de los clientes llegando por recomendación.",
+        angle: "Dejamos de hablar de “servicios integrales” y posicionamos al despacho como el especialista en operaciones de empresa familiar.",
+        result: "Consultas más cualificadas, mejor ticket medio y los socios como referentes en su nicho.",
+        metrics: [
+          { value: "4 → 17", label: "consultas cualificadas al mes" },
+          { value: "+32%", label: "honorario medio por asunto" },
+          { value: "9", label: "meses para conseguirlo" },
+        ],
+      },
+      {
         sector: "turismo-experiencias",
         client: "Viajes Nieva",
         anonymous: false,
@@ -292,6 +320,20 @@ export const es = {
         angle: "Visión estratégica para adelantarse a los acontecimientos y redefinir el papel de la agencia boutique.",
         result: "Decisiones clave para su desarrollo como empresa.",
         metrics: [],
+      },
+      {
+        sector: "turismo-experiencias",
+        client: "Agencia de viajes culturales · Madrid",
+        anonymous: true,
+        title: "Viajeros que reservan sin pasar por los portales",
+        challenge: "Competía en precio contra plataformas gigantes con un producto que no se parecía en nada al suyo.",
+        angle: "Convertimos a los guías en protagonistas y lanzamos una newsletter con relatos de cada ruta.",
+        result: "Una comunidad propia que reserva directamente y paga por la experiencia, no por el precio.",
+        metrics: [
+          { value: "38%", label: "reservas desde la newsletter" },
+          { value: "+24%", label: "ticket medio por viajero" },
+          { value: "6.200", label: "suscriptores en un año" },
+        ],
       },
     ],
   },

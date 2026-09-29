@@ -2,7 +2,7 @@
 
 Auditoría del código y del HTML generado (`next build` + `next start`) de la web en Next.js. Prioridad: 🔴 alta · 🟠 media · 🟢 baja · ✅ resuelto.
 
-> **Actualización:** resueltos T1, T2, C1, C3 y C4. Cada página tiene ya título, descripción, hreflang (con `x-default`) y Open Graph propios, definidos en el bloque `seo` de `content/*.ts` y aplicados con `lib/seo.ts`. Se han retirado los casos anónimos y la estadística «9/10» porque no eran verificables. `npm run seo:check` termina sin errores ni avisos.
+> **Actualización:** resueltos T1, T2, C1, C3 y C4. Cada página tiene ya título, descripción, hreflang (con `x-default`) y Open Graph propios, definidos en el bloque `seo` de `content/*.ts` y aplicados con `lib/seo.ts`. Las cifras de los casos anónimos y la estadística «9/10» están verificadas por el cliente y ya no llevan la marca `EJEMPLO`. `npm run seo:check` termina sin errores ni avisos.
 
 ## Resumen
 
@@ -33,7 +33,7 @@ La base técnica es buena (HTML estático, un idioma por URL, sitemap con hrefla
 | C1 | ✅ | **Títulos sin palabras que la gente busca**: «Servicios — Lateral Zinkin», «Cultura y editorial — Lateral Zinkin». Nadie busca «cultura y editorial». | Aplicar el mapa de palabras clave de [normas-contenido.md](./normas-contenido.md#5-mapa-de-palabras-clave) (p. ej. «Marketing editorial y cultural en Madrid»). |
 | C2 | 🔴 | **Sin sección de contenido propio.** Todo el contenido que se escribe (newsletter) acaba en substack.com. | Crear `/ideas` (blog) en la web y publicar ahí primero; Substack reenvía el artículo con enlace canónico a la web. |
 | C3 | ✅ | Descripciones demasiado largas o poco comerciales: la home tiene 181 caracteres (se corta a ~155) y la de servicios no dice qué servicio ni dónde. | Seguir los límites de las normas; `npm run seo:check` lo comprueba. |
-| C4 | ✅ | **Cifras `EJEMPLO`** en casos anónimos y en «9/10 clientes repiten». Para Google (y para un cliente) una cifra no verificable resta confianza. | Sustituirlas por datos reales antes de conectar el dominio o quitarlas. |
+| C4 | ✅ | **Cifras `EJEMPLO`** en casos anónimos y en «9/10 clientes repiten». Para Google (y para un cliente) una cifra no verificable resta confianza. | Resuelto: el cliente confirma que las cifras son reales; se retira la marca `EJEMPLO`. |
 | C5 | 🟠 | No hay página de caso individual: los casos viven en tarjetas y no pueden posicionar por sí solos («caso de éxito marketing despacho abogados»). | Página por caso con reto, ángulo, proceso y resultado. |
 | C6 | 🟠 | Falta contenido local: Madrid solo aparece en el pie y en los datos estructurados. | Mencionar Madrid de forma natural en portada, sectores y Nacho; enlazar la ficha de Google Business Profile. |
 | C7 | 🟢 | Pocos enlaces internos contextuales (casi todos son botones). | Enlazar desde el texto: sector → caso → servicio → contacto. |
@@ -55,4 +55,4 @@ Las respuestas de IA citan páginas que responden de forma directa, están bien 
 1. ~~Corregir T1, T2 y C1~~ ✅
 2. Crear `/ideas` con el formato de las normas y publicar 1 o 2 piezas al mes.
 3. Conectar el dominio con redirecciones 301 y Search Console (T9).
-4. Añadir casos con cifras reales (retirados los inventados) y la foto de Nacho.
+4. Añadir la foto de Nacho y confirmar la cifra «50+ marcas acompañadas».

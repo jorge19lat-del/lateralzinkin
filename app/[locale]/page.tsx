@@ -76,7 +76,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           <div className="cases-grid">
             {t.cases.items.map((c, i) => (
               <Reveal key={c.title} delay={(i % 2) * 0.1}>
-                <CaseCard c={c} t={t} featured={i === 0} />
+                <CaseCard c={c} t={t} featured={c.anonymous} />
               </Reveal>
             ))}
           </div>
