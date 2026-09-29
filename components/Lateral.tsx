@@ -3,11 +3,12 @@
 import { useRef, useState } from "react";
 import { useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 import type { Dict } from "@/lib/i18n";
-import { scenes, type SceneName } from "./scenes";
-import { seg } from "./scenes/rig";
+import SceneMedia, { PIVOT } from "./SceneMedia";
 import Reveal from "./Reveal";
 
 type Chapter = Dict["lateral"]["chapters"][number];
+
+const seg = (p: number, a: number, b: number) => Math.min(1, Math.max(0, (p - a) / (b - a)));
 
 function ChapterBlock({ c, i }: { c: Chapter; i: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,8 +17,8 @@ function ChapterBlock({ c, i }: { c: Chapter; i: number }) {
   const [progress, setProgress] = useState(0);
   useMotionValueEvent(scrollYProgress, "change", setProgress);
 
-  const { Scene, pivot, keyFrame } = scenes[c.scene as SceneName];
-  const p = reduce ? keyFrame : progress;
+  const pivot = PIVOT - 0.02;
+  const p = reduce ? 0.7 : progress;
   // El texto acompaña a la animación: se tacha la norma justo cuando el personaje la rompe
   const strike = reduce ? 1 : seg(p, pivot, pivot + 0.06);
   const after = reduce ? 1 : seg(p, pivot + 0.05, pivot + 0.13);
@@ -28,7 +29,7 @@ function ChapterBlock({ c, i }: { c: Chapter; i: number }) {
       <div className={`chapter-sticky ${i % 2 ? "is-reversed" : ""}`}>
         <div className="chapter__stage">
           <span className="chapter__num">0{i + 1} / 03</span>
-          <Scene p={p} />
+          <SceneMedia scene={c.scene} alt={c.name} p={p} />
         </div>
         <div className="chapter__copy">
           <p className="chapter__meta">
