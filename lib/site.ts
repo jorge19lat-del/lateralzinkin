@@ -14,6 +14,10 @@ export const site = {
   founded: 2007,
   // Sube la foto a public/img/nacho.jpg y pon aquí "/img/nacho.jpg"
   founderPhoto: "",
+  // Vídeos de las historias laterales (MP4 en public/video/). Si están vacíos se usan las fotos.
+  // Codificar con un fotograma clave en cada frame para que el scroll sea fluido:
+  // ffmpeg -i in.mp4 -vf scale=1600:-2,format=gray -g 1 -an -movflags +faststart out.mp4
+  lateralVideos: { fosbury: "", cruyff: "", hendrix: "" } as Record<string, string>,
 };
 
 // Clientes reales publicados en lateralzinkin.com
