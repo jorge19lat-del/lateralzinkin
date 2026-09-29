@@ -1,12 +1,21 @@
 // Contenido de la web en español (idioma de referencia).
-// Todo lo marcado con "EJEMPLO" son cifras ilustrativas que deben validarse antes de publicar
-// en el dominio definitivo. Solo aparecen en casos anónimos, nunca atribuidas a marcas reales.
+// Antes de editar, lee docs/seo/normas-contenido.md y docs/seo/voz-de-marca.md.
+// No se publican cifras, casos ni testimonios que no se puedan verificar.
 
 export const es = {
-  meta: {
-    title: "Lateral Zinkin — Marketing y comunicación para marcas con historia",
-    description:
-      "Consultora boutique de marketing y comunicación en Madrid desde 2007. Estrategia, marca y comunicación para editoriales, instituciones culturales, despachos profesionales y turismo.",
+  // Títulos (sin la marca, se añade sola) y descripciones para Google. Normas: title 30–60 con marca, description 120–155.
+  seo: {
+    home: { title: "Consultora de marketing boutique en Madrid", description: "Estrategia, marca y comunicación para editoriales, despachos de abogados y marcas de turismo. Consultora boutique de marketing en Madrid desde 2007." },
+    services: { title: "Consultoría de marketing y comunicación", description: "Estrategia, posicionamiento, branding, web y redes para marcas con historia. Dirección de marketing externa desde Madrid, con Nacho Latorre al frente." },
+    cases: { title: "Casos de éxito en marketing y comunicación", description: "Editorial Planeta, Bennet & Rey, Viajes Nieva y más: el reto, el ángulo que encontramos y el resultado de cada proyecto de marketing." },
+    about: { title: "Nacho Latorre Tambo, consultor de marketing", description: "Fundador de Lateral Zinkin y profesor de marketing en IMF. Desde 2007 ayuda a editoriales, despachos y agencias de viajes a encontrar su ángulo." },
+    test: { title: "Test gratuito de visibilidad de marca", description: "Ocho preguntas y tres minutos para medir la claridad, diferenciación, visibilidad y conversión de tu marca. Diagnóstico gratuito con recomendaciones." },
+    contact: { title: "Contacto: reserva una sesión estratégica", description: "Reserva una sesión estratégica gratuita de 30 minutos o cuéntanos tu proyecto. Te respondemos en menos de 24 horas laborables. Estamos en Madrid." },
+    sectors: {
+      "cultura-editorial": { title: "Marketing editorial y cultural en Madrid", description: "Lanzamiento de libros, marca de autor y comunicación de museos e instituciones culturales. Hemos trabajado con Planeta, Lonely Planet y el Thyssen." },
+      "despachos-profesionales": { title: "Marketing para abogados y despachos", description: "Posicionamiento, marca y captación de clientes para despachos de abogados y firmas de servicios que quieren crecer sin perder prestigio. Madrid." },
+      "turismo-experiencias": { title: "Marketing para agencias de viajes y turismo", description: "Estrategia digital, marca y comunidad propia para agencias de viajes boutique, destinos y experiencias culturales que compiten con los grandes portales." },
+    } as Record<string, { title: string; description: string }>,
   },
   nav: {
     services: "Servicios",
@@ -46,8 +55,7 @@ export const es = {
     { value: "2007", label: "año en que empezamos a mirar de lado" },
     { value: "50+", label: "marcas acompañadas" },
     { value: "3", label: "sectores donde somos especialistas" },
-    // EJEMPLO: validar con datos reales de repetición/recomendación
-    { value: "9/10", label: "clientes repiten o nos recomiendan" },
+    { value: "8", label: "testimonios firmados por clientes" },
   ],
   lateral: {
     kicker: "El método",
@@ -263,22 +271,7 @@ export const es = {
         challenge: "Un sector con cambios constantes, lanzamientos continuos y la necesidad de adaptarse a la improvisación.",
         angle: "Análisis continuo de cada acción y una estrategia de redes flexible, capaz de reaccionar sin perder coherencia.",
         result: "Mejora de la presencia de la marca y un aumento notable de seguidores.",
-        metrics: [],
-      },
-      {
-        // EJEMPLO: cifras ilustrativas, cliente anónimo
-        sector: "cultura-editorial",
-        client: "Sello editorial independiente · Barcelona",
-        anonymous: true,
-        title: "Una novela debut que agotó tres ediciones",
-        challenge: "Autora desconocida, presupuesto limitado y una fecha de lanzamiento compitiendo con las grandes novedades de otoño.",
-        angle: "En vez de vender el libro, vendimos la conversación: un club de lectura previo con libreros y lectores prescriptores.",
-        result: "El libro llegó a librerías con lista de espera y la prensa vino detrás.",
-        metrics: [
-          { value: "3", label: "reediciones en 5 meses" },
-          { value: "+186%", label: "preventas vs. lanzamiento anterior" },
-          { value: "41", label: "apariciones en medios" },
-        ],
+        metrics: [] as { value: string; label: string }[], // añadir solo cifras verificables
       },
       {
         sector: "despachos-profesionales",
@@ -291,21 +284,6 @@ export const es = {
         metrics: [],
       },
       {
-        // EJEMPLO: cifras ilustrativas, cliente anónimo
-        sector: "despachos-profesionales",
-        client: "Despacho boutique de derecho mercantil · Madrid",
-        anonymous: true,
-        title: "De depender del boca a boca a llenar la agenda",
-        challenge: "Cuatro socios brillantes, una web genérica y el 90% de los clientes llegando por recomendación.",
-        angle: "Dejamos de hablar de “servicios integrales” y posicionamos al despacho como el especialista en operaciones de empresa familiar.",
-        result: "Consultas más cualificadas, mejor ticket medio y los socios como referentes en su nicho.",
-        metrics: [
-          { value: "4 → 17", label: "consultas cualificadas al mes" },
-          { value: "+32%", label: "honorario medio por asunto" },
-          { value: "9", label: "meses para conseguirlo" },
-        ],
-      },
-      {
         sector: "turismo-experiencias",
         client: "Viajes Nieva",
         anonymous: false,
@@ -314,21 +292,6 @@ export const es = {
         angle: "Visión estratégica para adelantarse a los acontecimientos y redefinir el papel de la agencia boutique.",
         result: "Decisiones clave para su desarrollo como empresa.",
         metrics: [],
-      },
-      {
-        // EJEMPLO: cifras ilustrativas, cliente anónimo
-        sector: "turismo-experiencias",
-        client: "Agencia de viajes culturales · Madrid",
-        anonymous: true,
-        title: "Viajeros que reservan sin pasar por los portales",
-        challenge: "Competía en precio contra plataformas gigantes con un producto que no se parecía en nada al suyo.",
-        angle: "Convertimos a los guías en protagonistas y lanzamos una newsletter con relatos de cada ruta.",
-        result: "Una comunidad propia que reserva directamente y paga por la experiencia, no por el precio.",
-        metrics: [
-          { value: "38%", label: "reservas desde la newsletter" },
-          { value: "+24%", label: "ticket medio por viajero" },
-          { value: "6.200", label: "suscriptores en un año" },
-        ],
       },
     ],
   },

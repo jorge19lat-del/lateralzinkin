@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getDict } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { href, paths } from "@/lib/nav";
 import PageHero from "@/components/PageHero";
 import CaseCard from "@/components/CaseCard";
@@ -10,8 +11,7 @@ import Reveal from "@/components/Reveal";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/casos">): Promise<Metadata> {
   const { locale } = await params;
-  const t = getDict(locale);
-  return { title: t.pages.cases.title, description: t.cases.sub, alternates: { canonical: href(locale, paths.cases) } };
+  return pageMetadata(locale, paths.cases, getDict(locale).seo.cases);
 }
 
 export default async function CasesPage({ params }: PageProps<"/[locale]/casos">) {

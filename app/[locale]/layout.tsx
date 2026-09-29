@@ -2,8 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { IBM_Plex_Mono, Instrument_Serif, Inter_Tight, Zilla_Slab } from "next/font/google";
 import "../globals.css";
-import { getDict, hasLocale, localeTags, locales } from "@/lib/i18n";
+import { getDict, hasLocale, locales } from "@/lib/i18n";
 import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/Cursor";
@@ -25,22 +26,11 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
   const t = getDict(locale);
+  const base = pageMetadata(locale, "", t.seo.home, true);
   return {
+    ...base,
     metadataBase: new URL(site.url),
-    title: { default: t.meta.title, template: `%s — ${site.name}` },
-    description: t.meta.description,
-    alternates: {
-      canonical: `/${locale}`,
-      languages: Object.fromEntries(locales.map((l) => [localeTags[l], `/${l}`])),
-    },
-    openGraph: {
-      type: "website",
-      siteName: site.name,
-      title: t.meta.title,
-      description: t.meta.description,
-      locale: localeTags[hasLocale(locale) ? locale : "es"].replace("-", "_"),
-    },
-    twitter: { card: "summary_large_image", title: t.meta.title, description: t.meta.description },
+    title: { default: `${t.seo.home.title} — ${site.name}`, template: `%s — ${site.name}` },
   };
 }
 
@@ -54,7 +44,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
     "@type": "ProfessionalService",
     name: site.name,
     legalName: site.legalName,
-    description: t.meta.description,
+    description: t.seo.home.description,
     url: `${site.url}/${locale}`,
     email: site.email,
     telephone: site.phone,

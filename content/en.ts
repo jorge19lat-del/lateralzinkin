@@ -1,11 +1,20 @@
 import type { Dict } from "./es";
 
-// English translation. Figures marked "EJEMPLO" in es.ts are illustrative here too.
+// English translation. Follow docs/seo/normas-contenido.md and docs/seo/voz-de-marca.md.
 export const en: Dict = {
-  meta: {
-    title: "Lateral Zinkin — Marketing and communication for brands with a story",
-    description:
-      "Boutique marketing and communication consultancy in Madrid since 2007. Strategy, branding and communication for publishers, cultural institutions, professional firms and tourism brands.",
+  // Títulos (sin la marca, se añade sola) y descripciones para Google. Normas: title 30–60 con marca, description 120–155.
+  seo: {
+    home: { title: "Boutique marketing consultancy in Madrid", description: "Strategy, branding and communication for publishers, law firms and tourism brands. A boutique marketing consultancy based in Madrid since 2007." },
+    services: { title: "Marketing and communication consultancy", description: "Strategy, positioning, branding, web and social media for brands with a story. Outsourced marketing direction from Madrid, led by Nacho Latorre." },
+    cases: { title: "Marketing and communication case studies", description: "Editorial Planeta, Bennet & Rey, Viajes Nieva and more: the challenge, the angle we found and the result of each marketing project we led." },
+    about: { title: "Nacho Latorre Tambo, marketing consultant", description: "Founder of Lateral Zinkin and marketing lecturer at IMF. Since 2007 he has helped publishers, law firms and travel agencies find their angle." },
+    test: { title: "Free brand visibility test in three minutes", description: "Eight questions, three minutes: measure your brand's clarity, differentiation, visibility and conversion. Free diagnosis with recommendations." },
+    contact: { title: "Contact us: book a strategy session", description: "Book a free 30-minute strategy session or tell us about your project. We reply within 24 business hours from our studio in Madrid." },
+    sectors: {
+      "cultura-editorial": { title: "Publishing and cultural marketing in Madrid", description: "Book launches, author branding and communication for museums and cultural institutions. We have worked with Planeta, Lonely Planet and the Thyssen." },
+      "despachos-profesionales": { title: "Law firm marketing in Spain", description: "Positioning, branding and client acquisition for law firms and professional services firms that want to grow without losing prestige. Based in Madrid." },
+      "turismo-experiencias": { title: "Marketing for travel agencies and tourism", description: "Digital strategy, branding and an owned community for boutique travel agencies, destinations and cultural experiences competing with big portals." },
+    } as Record<string, { title: string; description: string }>,
   },
   nav: {
     services: "Services",
@@ -45,7 +54,7 @@ export const en: Dict = {
     { value: "2007", label: "the year we started looking sideways" },
     { value: "50+", label: "brands supported" },
     { value: "3", label: "sectors where we specialise" },
-    { value: "9/10", label: "clients come back or refer us" },
+    { value: "8", label: "signed client testimonials" },
   ],
   lateral: {
     kicker: "The method",
@@ -264,20 +273,6 @@ export const en: Dict = {
         metrics: [],
       },
       {
-        sector: "cultura-editorial",
-        client: "Independent publisher · Barcelona",
-        anonymous: true,
-        title: "A debut novel that sold out three printings",
-        challenge: "An unknown author, a limited budget and a release date competing with the big autumn titles.",
-        angle: "Instead of selling the book, we sold the conversation: an early reading club with booksellers and influential readers.",
-        result: "The book reached bookshops with a waiting list, and the press followed.",
-        metrics: [
-          { value: "3", label: "reprints in 5 months" },
-          { value: "+186%", label: "pre-orders vs. previous launch" },
-          { value: "41", label: "media mentions" },
-        ],
-      },
-      {
         sector: "despachos-profesionales",
         client: "Bennet & Rey Abogados",
         anonymous: false,
@@ -288,20 +283,6 @@ export const en: Dict = {
         metrics: [],
       },
       {
-        sector: "despachos-profesionales",
-        client: "Boutique corporate law firm · Madrid",
-        anonymous: true,
-        title: "From word of mouth to a full calendar",
-        challenge: "Four brilliant partners, a generic website and 90% of clients coming from referrals.",
-        angle: "We stopped talking about “full-service” and positioned the firm as the specialist in family-business transactions.",
-        result: "Better-qualified enquiries, higher fees and the partners recognised as leaders in their niche.",
-        metrics: [
-          { value: "4 → 17", label: "qualified enquiries per month" },
-          { value: "+32%", label: "average fee per matter" },
-          { value: "9", label: "months to get there" },
-        ],
-      },
-      {
         sector: "turismo-experiencias",
         client: "Viajes Nieva",
         anonymous: false,
@@ -310,20 +291,6 @@ export const en: Dict = {
         angle: "Strategic vision to anticipate events and redefine the role of the boutique agency.",
         result: "Key decisions for its growth as a company.",
         metrics: [],
-      },
-      {
-        sector: "turismo-experiencias",
-        client: "Cultural travel agency · Madrid",
-        anonymous: true,
-        title: "Travellers who book without going through portals",
-        challenge: "Competing on price against giant platforms with a product nothing like theirs.",
-        angle: "We made the guides the heroes and launched a newsletter with stories from every route.",
-        result: "An owned community that books directly and pays for the experience, not the price.",
-        metrics: [
-          { value: "38%", label: "of bookings from the newsletter" },
-          { value: "+24%", label: "average spend per traveller" },
-          { value: "6,200", label: "subscribers in one year" },
-        ],
       },
     ],
   },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getDict } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { href, paths } from "@/lib/nav";
 import PageHero from "@/components/PageHero";
 import Services from "@/components/Services";
@@ -11,8 +12,7 @@ import Reveal from "@/components/Reveal";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/servicios">): Promise<Metadata> {
   const { locale } = await params;
-  const t = getDict(locale);
-  return { title: t.pages.services.title, description: t.services.sub, alternates: { canonical: href(locale, paths.services) } };
+  return pageMetadata(locale, paths.services, getDict(locale).seo.services);
 }
 
 export default async function ServicesPage({ params }: PageProps<"/[locale]/servicios">) {

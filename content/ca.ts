@@ -1,11 +1,20 @@
 import type { Dict } from "./es";
 
-// Traducció al català. Les xifres marcades com a "EJEMPLO" a es.ts també són il·lustratives aquí.
+// Traducció al català. Segueix docs/seo/normas-contenido.md i docs/seo/voz-de-marca.md.
 export const ca: Dict = {
-  meta: {
-    title: "Lateral Zinkin — Màrqueting i comunicació per a marques amb història",
-    description:
-      "Consultora boutique de màrqueting i comunicació a Madrid des del 2007. Estratègia, marca i comunicació per a editorials, institucions culturals, despatxos professionals i turisme.",
+  // Títulos (sin la marca, se añade sola) y descripciones para Google. Normas: title 30–60 con marca, description 120–155.
+  seo: {
+    home: { title: "Consultora de màrqueting boutique a Madrid", description: "Estratègia, marca i comunicació per a editorials, despatxos d'advocats i marques de turisme. Consultora boutique de màrqueting a Madrid des del 2007." },
+    services: { title: "Consultoria de màrqueting i comunicació", description: "Estratègia, posicionament, branding, web i xarxes per a marques amb història. Direcció de màrqueting externa des de Madrid, amb Nacho Latorre." },
+    cases: { title: "Casos d'èxit en màrqueting i comunicació", description: "Editorial Planeta, Bennet & Rey, Viajes Nieva i més: el repte, l'angle que vam trobar i el resultat de cada projecte de màrqueting." },
+    about: { title: "Nacho Latorre, consultor de màrqueting", description: "Fundador de Lateral Zinkin i professor de màrqueting a IMF. Des del 2007 ajuda editorials, despatxos i agències de viatges a trobar el seu angle." },
+    test: { title: "Test gratuït de visibilitat de marca", description: "Vuit preguntes i tres minuts per mesurar la claredat, la diferenciació, la visibilitat i la conversió de la teva marca. Diagnòstic gratuït." },
+    contact: { title: "Contacte: reserva una sessió estratègica", description: "Reserva una sessió estratègica gratuïta de 30 minuts o explica'ns el teu projecte. Et responem en menys de 24 hores laborables. Som a Madrid." },
+    sectors: {
+      "cultura-editorial": { title: "Màrqueting editorial i cultural a Madrid", description: "Llançament de llibres, marca d'autor i comunicació de museus i institucions culturals. Hem treballat amb Planeta, Lonely Planet i el Thyssen." },
+      "despachos-profesionales": { title: "Màrqueting per a advocats i despatxos", description: "Posicionament, marca i captació de clients per a despatxos d'advocats i firmes de serveis que volen créixer sense perdre prestigi. Som a Madrid." },
+      "turismo-experiencias": { title: "Màrqueting per a agències de viatges", description: "Estratègia digital, marca i comunitat pròpia per a agències de viatges boutique, destinacions i experiències culturals davant dels grans portals." },
+    } as Record<string, { title: string; description: string }>,
   },
   nav: {
     services: "Serveis",
@@ -45,7 +54,7 @@ export const ca: Dict = {
     { value: "2007", label: "any en què vam començar a mirar de costat" },
     { value: "50+", label: "marques acompanyades" },
     { value: "3", label: "sectors on som especialistes" },
-    { value: "9/10", label: "clients repeteixen o ens recomanen" },
+    { value: "8", label: "testimonis signats per clients" },
   ],
   lateral: {
     kicker: "El mètode",
@@ -264,20 +273,6 @@ export const ca: Dict = {
         metrics: [],
       },
       {
-        sector: "cultura-editorial",
-        client: "Segell editorial independent · Barcelona",
-        anonymous: true,
-        title: "Una novel·la debut que va exhaurir tres edicions",
-        challenge: "Autora desconeguda, pressupost limitat i una data de llançament competint amb les grans novetats de tardor.",
-        angle: "En lloc de vendre el llibre, vam vendre la conversa: un club de lectura previ amb llibreters i lectors prescriptors.",
-        result: "El llibre va arribar a les llibreries amb llista d'espera i la premsa va venir darrere.",
-        metrics: [
-          { value: "3", label: "reedicions en 5 mesos" },
-          { value: "+186%", label: "prevendes vs. llançament anterior" },
-          { value: "41", label: "aparicions en mitjans" },
-        ],
-      },
-      {
         sector: "despachos-profesionales",
         client: "Bennet & Rey Abogados",
         anonymous: false,
@@ -288,20 +283,6 @@ export const ca: Dict = {
         metrics: [],
       },
       {
-        sector: "despachos-profesionales",
-        client: "Despatx boutique de dret mercantil · Madrid",
-        anonymous: true,
-        title: "De dependre del boca-orella a omplir l'agenda",
-        challenge: "Quatre socis brillants, una web genèrica i el 90% dels clients arribant per recomanació.",
-        angle: "Vam deixar de parlar de “serveis integrals” i vam posicionar el despatx com l'especialista en operacions d'empresa familiar.",
-        result: "Consultes més qualificades, millors honoraris i els socis com a referents del seu nínxol.",
-        metrics: [
-          { value: "4 → 17", label: "consultes qualificades al mes" },
-          { value: "+32%", label: "honorari mitjà per assumpte" },
-          { value: "9", label: "mesos per aconseguir-ho" },
-        ],
-      },
-      {
         sector: "turismo-experiencias",
         client: "Viajes Nieva",
         anonymous: false,
@@ -310,20 +291,6 @@ export const ca: Dict = {
         angle: "Visió estratègica per avançar-se als esdeveniments i redefinir el paper de l'agència boutique.",
         result: "Decisions clau per al seu desenvolupament com a empresa.",
         metrics: [],
-      },
-      {
-        sector: "turismo-experiencias",
-        client: "Agència de viatges culturals · Madrid",
-        anonymous: true,
-        title: "Viatgers que reserven sense passar pels portals",
-        challenge: "Competia en preu amb plataformes gegants amb un producte que no s'hi assemblava gens.",
-        angle: "Vam convertir els guies en protagonistes i vam llançar una newsletter amb relats de cada ruta.",
-        result: "Una comunitat pròpia que reserva directament i paga per l'experiència, no pel preu.",
-        metrics: [
-          { value: "38%", label: "reserves des de la newsletter" },
-          { value: "+24%", label: "tiquet mitjà per viatger" },
-          { value: "6.200", label: "subscriptors en un any" },
-        ],
       },
     ],
   },
