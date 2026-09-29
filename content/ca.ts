@@ -1,11 +1,20 @@
 import type { Dict } from "./es";
 
-// Traducció al català. Les xifres marcades com a "EJEMPLO" a es.ts també són il·lustratives aquí.
+// Traducció al català. Segueix docs/seo/normas-contenido.md i docs/seo/voz-de-marca.md.
 export const ca: Dict = {
-  meta: {
-    title: "Lateral Zinkin — Màrqueting i comunicació per a marques amb història",
-    description:
-      "Consultora boutique de màrqueting i comunicació a Madrid des del 2007. Estratègia, marca i comunicació per a editorials, institucions culturals, despatxos professionals i turisme.",
+  // Títulos (sin la marca, se añade sola) y descripciones para Google. Normas: title 30–60 con marca, description 120–155.
+  seo: {
+    home: { title: "Consultora de màrqueting boutique a Madrid", description: "Estratègia, marca i comunicació per a editorials, despatxos d'advocats i marques de turisme. Consultora boutique de màrqueting a Madrid des del 2007." },
+    services: { title: "Consultoria de màrqueting i comunicació", description: "Estratègia, posicionament, branding, web i xarxes per a marques amb història. Direcció de màrqueting externa des de Madrid, amb Nacho Latorre." },
+    cases: { title: "Casos d'èxit en màrqueting i comunicació", description: "Editorial Planeta, Bennet & Rey, Viajes Nieva i més: el repte, l'angle que vam trobar i el resultat de cada projecte de màrqueting." },
+    about: { title: "Nacho Latorre, consultor de màrqueting", description: "Fundador de Lateral Zinkin i professor de màrqueting a IMF. Des del 2007 ajuda editorials, despatxos i agències de viatges a trobar el seu angle." },
+    test: { title: "Test gratuït de visibilitat de marca", description: "Vuit preguntes i tres minuts per mesurar la claredat, la diferenciació, la visibilitat i la conversió de la teva marca. Diagnòstic gratuït." },
+    contact: { title: "Contacte: reserva una sessió estratègica", description: "Reserva una sessió estratègica gratuïta de 30 minuts o explica'ns el teu projecte. Et responem en menys de 24 hores laborables. Som a Madrid." },
+    sectors: {
+      "cultura-editorial": { title: "Màrqueting editorial i cultural a Madrid", description: "Llançament de llibres, marca d'autor i comunicació de museus i institucions culturals. Hem treballat amb Planeta, Lonely Planet i el Thyssen." },
+      "despachos-profesionales": { title: "Màrqueting per a advocats i despatxos", description: "Posicionament, marca i captació de clients per a despatxos d'advocats i firmes de serveis que volen créixer sense perdre prestigi. Som a Madrid." },
+      "turismo-experiencias": { title: "Màrqueting per a agències de viatges", description: "Estratègia digital, marca i comunitat pròpia per a agències de viatges boutique, destinacions i experiències culturals davant dels grans portals." },
+    } as Record<string, { title: string; description: string }>,
   },
   nav: {
     services: "Serveis",

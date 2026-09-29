@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { es } from "@/content/es";
 import { getDict, locales } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { href, paths, sectorHref } from "@/lib/nav";
 import PageHero from "@/components/PageHero";
 import CaseCard from "@/components/CaseCard";
@@ -17,9 +18,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/sectores/[sector]">): Promise<Metadata> {
   const { locale, sector } = await params;
-  const s = getDict(locale).sectors.items.find((i) => i.slug === sector);
-  if (!s) return {};
-  return { title: s.title, description: s.heroSub, alternates: { canonical: sectorHref(locale, sector) } };
+  const seo = getDict(locale).seo.sectors[sector];
+  if (!seo) return {};
+  return pageMetadata(locale, `${paths.sectors}/${sector}`, seo);
 }
 
 export default async function SectorPage({ params }: PageProps<"/[locale]/sectores/[sector]">) {

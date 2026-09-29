@@ -1,11 +1,20 @@
 import type { Dict } from "./es";
 
-// English translation. Figures marked "EJEMPLO" in es.ts are illustrative here too.
+// English translation. Follow docs/seo/normas-contenido.md and docs/seo/voz-de-marca.md.
 export const en: Dict = {
-  meta: {
-    title: "Lateral Zinkin — Marketing and communication for brands with a story",
-    description:
-      "Boutique marketing and communication consultancy in Madrid since 2007. Strategy, branding and communication for publishers, cultural institutions, professional firms and tourism brands.",
+  // Títulos (sin la marca, se añade sola) y descripciones para Google. Normas: title 30–60 con marca, description 120–155.
+  seo: {
+    home: { title: "Boutique marketing consultancy in Madrid", description: "Strategy, branding and communication for publishers, law firms and tourism brands. A boutique marketing consultancy based in Madrid since 2007." },
+    services: { title: "Marketing and communication consultancy", description: "Strategy, positioning, branding, web and social media for brands with a story. Outsourced marketing direction from Madrid, led by Nacho Latorre." },
+    cases: { title: "Marketing and communication case studies", description: "Editorial Planeta, Bennet & Rey, Viajes Nieva and more: the challenge, the angle we found and the result of each marketing project we led." },
+    about: { title: "Nacho Latorre Tambo, marketing consultant", description: "Founder of Lateral Zinkin and marketing lecturer at IMF. Since 2007 he has helped publishers, law firms and travel agencies find their angle." },
+    test: { title: "Free brand visibility test in three minutes", description: "Eight questions, three minutes: measure your brand's clarity, differentiation, visibility and conversion. Free diagnosis with recommendations." },
+    contact: { title: "Contact us: book a strategy session", description: "Book a free 30-minute strategy session or tell us about your project. We reply within 24 business hours from our studio in Madrid." },
+    sectors: {
+      "cultura-editorial": { title: "Publishing and cultural marketing in Madrid", description: "Book launches, author branding and communication for museums and cultural institutions. We have worked with Planeta, Lonely Planet and the Thyssen." },
+      "despachos-profesionales": { title: "Law firm marketing in Spain", description: "Positioning, branding and client acquisition for law firms and professional services firms that want to grow without losing prestige. Based in Madrid." },
+      "turismo-experiencias": { title: "Marketing for travel agencies and tourism", description: "Digital strategy, branding and an owned community for boutique travel agencies, destinations and cultural experiences competing with big portals." },
+    } as Record<string, { title: string; description: string }>,
   },
   nav: {
     services: "Services",

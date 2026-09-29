@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { getDict } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { href, paths } from "@/lib/nav";
 import PageHero from "@/components/PageHero";
 import Quiz from "@/components/Quiz";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/test">): Promise<Metadata> {
   const { locale } = await params;
-  const t = getDict(locale);
-  return { title: t.pages.test.title, description: t.quizTeaser.sub, alternates: { canonical: href(locale, paths.test) } };
+  return pageMetadata(locale, paths.test, getDict(locale).seo.test);
 }
 
 export default async function TestPage({ params }: PageProps<"/[locale]/test">) {

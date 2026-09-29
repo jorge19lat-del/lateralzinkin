@@ -80,7 +80,7 @@ La extensión la marca la intención de búsqueda, no un objetivo de palabras. N
 
 | Elemento | Norma |
 |---|---|
-| `title` | **30–60 caracteres**. Palabra clave al principio. La marca la añade la plantilla («— Lateral Zinkin»). Único en toda la web. |
+| `title` | **30–60 caracteres contando « — Lateral Zinkin»**, que se añade solo. Palabra clave al principio. Único en toda la web. Se define en el bloque `seo` de `content/*.ts`. |
 | `description` | **120–155 caracteres**. Qué ofrece la página, para quién y dónde, con un motivo para hacer clic. Única. |
 | H1 | Uno por página, con la palabra clave o una variante natural. Puede ser más creativo que el `title`. |
 | H2/H3 | Jerárquicos. Si responden a una búsqueda, formularlos como pregunta («¿Cuánto cuesta el marketing para un despacho?»). |

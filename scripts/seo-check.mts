@@ -57,14 +57,14 @@ function checkBanned(lang: string, where: string, text: string) {
 
 // 1. Diccionarios de la web
 for (const [lang, t] of Object.entries(dicts)) {
+  const { sectors, ...pagesSeo } = t.seo;
   const pages: [string, string, string][] = [
-    ["inicio", t.meta.title, t.meta.description],
-    ["servicios", t.pages.services.title + BRAND, t.services.sub],
-    ["casos", t.pages.cases.title + BRAND, t.cases.sub],
-    ["nacho", t.founder.name + BRAND, t.founder.teaser],
-    ["test", t.pages.test.title + BRAND, t.quizTeaser.sub],
-    ["contacto", t.pages.contact.title + BRAND, t.contact.sub],
-    ...t.sectors.items.map((s) => [`sector ${s.slug}`, s.title + BRAND, s.heroSub] as [string, string, string]),
+    ...Object.entries(pagesSeo).map(([k, v]) => [k, v.title + BRAND, v.description] as [string, string, string]),
+    ...t.sectors.items.map((s) => {
+      const v = sectors[s.slug];
+      if (!v) errors.push(`[${lang}] falta seo.sectors["${s.slug}"]`);
+      return [`sector ${s.slug}`, (v?.title ?? "") + BRAND, v?.description ?? ""] as [string, string, string];
+    }),
   ];
   const seen = new Map<string, string>();
   for (const [page, title, description] of pages) {

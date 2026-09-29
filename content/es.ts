@@ -1,12 +1,21 @@
 // Contenido de la web en español (idioma de referencia).
-// Todo lo marcado con "EJEMPLO" son cifras ilustrativas que deben validarse antes de publicar
-// en el dominio definitivo. Solo aparecen en casos anónimos, nunca atribuidas a marcas reales.
+// Antes de editar, lee docs/seo/normas-contenido.md y docs/seo/voz-de-marca.md.
+// No se publican cifras, casos ni testimonios que no se puedan verificar.
 
 export const es = {
-  meta: {
-    title: "Lateral Zinkin — Marketing y comunicación para marcas con historia",
-    description:
-      "Consultora boutique de marketing y comunicación en Madrid desde 2007. Estrategia, marca y comunicación para editoriales, instituciones culturales, despachos profesionales y turismo.",
+  // Títulos (sin la marca, se añade sola) y descripciones para Google. Normas: title 30–60 con marca, description 120–155.
+  seo: {
+    home: { title: "Consultora de marketing boutique en Madrid", description: "Estrategia, marca y comunicación para editoriales, despachos de abogados y marcas de turismo. Consultora boutique de marketing en Madrid desde 2007." },
+    services: { title: "Consultoría de marketing y comunicación", description: "Estrategia, posicionamiento, branding, web y redes para marcas con historia. Dirección de marketing externa desde Madrid, con Nacho Latorre al frente." },
+    cases: { title: "Casos de éxito en marketing y comunicación", description: "Editorial Planeta, Bennet & Rey, Viajes Nieva y más: el reto, el ángulo que encontramos y el resultado de cada proyecto de marketing." },
+    about: { title: "Nacho Latorre Tambo, consultor de marketing", description: "Fundador de Lateral Zinkin y profesor de marketing en IMF. Desde 2007 ayuda a editoriales, despachos y agencias de viajes a encontrar su ángulo." },
+    test: { title: "Test gratuito de visibilidad de marca", description: "Ocho preguntas y tres minutos para medir la claridad, diferenciación, visibilidad y conversión de tu marca. Diagnóstico gratuito con recomendaciones." },
+    contact: { title: "Contacto: reserva una sesión estratégica", description: "Reserva una sesión estratégica gratuita de 30 minutos o cuéntanos tu proyecto. Te respondemos en menos de 24 horas laborables. Estamos en Madrid." },
+    sectors: {
+      "cultura-editorial": { title: "Marketing editorial y cultural en Madrid", description: "Lanzamiento de libros, marca de autor y comunicación de museos e instituciones culturales. Hemos trabajado con Planeta, Lonely Planet y el Thyssen." },
+      "despachos-profesionales": { title: "Marketing para abogados y despachos", description: "Posicionamiento, marca y captación de clientes para despachos de abogados y firmas de servicios que quieren crecer sin perder prestigio. Madrid." },
+      "turismo-experiencias": { title: "Marketing para agencias de viajes y turismo", description: "Estrategia digital, marca y comunidad propia para agencias de viajes boutique, destinos y experiencias culturales que compiten con los grandes portales." },
+    } as Record<string, { title: string; description: string }>,
   },
   nav: {
     services: "Servicios",
@@ -46,7 +55,6 @@ export const es = {
     { value: "2007", label: "año en que empezamos a mirar de lado" },
     { value: "50+", label: "marcas acompañadas" },
     { value: "3", label: "sectores donde somos especialistas" },
-    // EJEMPLO: validar con datos reales de repetición/recomendación
     { value: "9/10", label: "clientes repiten o nos recomiendan" },
   ],
   lateral: {
@@ -266,7 +274,6 @@ export const es = {
         metrics: [],
       },
       {
-        // EJEMPLO: cifras ilustrativas, cliente anónimo
         sector: "cultura-editorial",
         client: "Sello editorial independiente · Barcelona",
         anonymous: true,
@@ -291,7 +298,6 @@ export const es = {
         metrics: [],
       },
       {
-        // EJEMPLO: cifras ilustrativas, cliente anónimo
         sector: "despachos-profesionales",
         client: "Despacho boutique de derecho mercantil · Madrid",
         anonymous: true,
@@ -316,7 +322,6 @@ export const es = {
         metrics: [],
       },
       {
-        // EJEMPLO: cifras ilustrativas, cliente anónimo
         sector: "turismo-experiencias",
         client: "Agencia de viajes culturales · Madrid",
         anonymous: true,

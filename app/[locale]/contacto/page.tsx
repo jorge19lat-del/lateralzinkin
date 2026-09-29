@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getDict } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { href, paths } from "@/lib/nav";
 import { site } from "@/lib/site";
 import PageHero from "@/components/PageHero";
@@ -9,8 +10,7 @@ import Reveal from "@/components/Reveal";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/contacto">): Promise<Metadata> {
   const { locale } = await params;
-  const t = getDict(locale);
-  return { title: t.pages.contact.title, description: t.contact.sub, alternates: { canonical: href(locale, paths.contact) } };
+  return pageMetadata(locale, paths.contact, getDict(locale).seo.contact);
 }
 
 export default async function ContactPage({ params }: PageProps<"/[locale]/contacto">) {

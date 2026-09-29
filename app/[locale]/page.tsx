@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getDict } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { href, paths } from "@/lib/nav";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
@@ -16,10 +18,14 @@ import Newsletter from "@/components/Newsletter";
 import FinalCta from "@/components/FinalCta";
 import Reveal from "@/components/Reveal";
 
+export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, "", getDict(locale).seo.home, true);
+}
+
 export default async function Home({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   const t = getDict(locale);
-  const featured = [t.cases.items[1], t.cases.items[3], t.cases.items[5]];
 
   return (
     <>
@@ -68,14 +74,11 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
             </Reveal>
           </div>
           <div className="cases-grid">
-            {featured.map((c, i) => (
-              <Reveal key={c.title} delay={(i % 2) * 0.1} className={i === 0 ? "" : ""}>
-                <CaseCard c={c} t={t} featured={i === 0} />
+            {t.cases.items.map((c, i) => (
+              <Reveal key={c.title} delay={(i % 2) * 0.1}>
+                <CaseCard c={c} t={t} featured={c.anonymous} />
               </Reveal>
             ))}
-            <Reveal delay={0.1}>
-              <CaseCard c={t.cases.items[0]} t={t} />
-            </Reveal>
           </div>
         </div>
       </section>
